@@ -1,0 +1,428 @@
+{
+	"info": {
+		"_postman_id": "5ecf3c75-36ea-4233-88c1-225473a5a0f8",
+		"name": "blog-platform",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "26431976"
+	},
+	"item": [
+		{
+			"name": "commets",
+			"item": [
+				{
+					"name": "get All Comments",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "secretKey",
+								"value": "^-Rp}l,AR$CF&(Q",
+								"type": "text"
+							}
+						],
+						"url": "https://blog-platform-sr5n.onrender.com/api/blog/2/comments"
+					},
+					"response": []
+				},
+				{
+					"name": "create comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJndWthZGF2aXRhZHplMjBAZ21haWwuY29tIiwiaWF0IjoxNjk0MTAzNTcxfQ.2IhKI8lTFmZUW7iK6sD7dVOra7AgfdGm9mtoajJJmEE"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "secretKey",
+								"value": "^-Rp}l,AR$CF&(Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "content",
+									"value": "second comment",
+									"type": "text"
+								}
+							]
+						},
+						"url": "https://blog-platform-sr5n.onrender.com/api/blog/2/comments/new"
+					},
+					"response": []
+				},
+				{
+					"name": "Update comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJndWthZGF2aXRhZHplMjBAZ21haWwuY29tIiwiaWF0IjoxNjk0MTAzNTcxfQ.2IhKI8lTFmZUW7iK6sD7dVOra7AgfdGm9mtoajJJmEE"
+							}
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "secretKey",
+								"value": "^-Rp}l,AR$CF&(Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "content",
+									"value": "updated comment",
+									"type": "text"
+								}
+							]
+						},
+						"url": "https://blog-platform-sr5n.onrender.com/api/blog/comments/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJndWthZGF2aXRhZHplMjBAZ21haWwuY29tIiwiaWF0IjoxNjk0MTA1NTIzfQ.r4WHy0pm3Th54iVbrE9qIqgGo-7HgRV0A6S7I74kXrg"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "secretKey",
+								"value": "^-Rp}l,AR$CF&(Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": "https://blog-platform-sr5n.onrender.com/api/blog/comments/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Count Comments",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "secretKey",
+								"value": "^-Rp}l,AR$CF&(Q",
+								"type": "text"
+							}
+						],
+						"url": "https://blog-platform-sr5n.onrender.com/api/blog/1/comments/length"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "get user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJndWthZGF2aXRhZHplMjBAZ21haWwuY29tIiwiaWF0IjoxNjk0MTA1NTIzfQ.r4WHy0pm3Th54iVbrE9qIqgGo-7HgRV0A6S7I74kXrg"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "secretKey",
+								"value": "^-Rp}l,AR$CF&(Q",
+								"type": "text"
+							}
+						],
+						"url": "https://blog-platform-sr5n.onrender.com/api/user/login"
+					},
+					"response": []
+				},
+				{
+					"name": "create user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "secretKey",
+								"value": "^-Rp}l,AR$CF&(Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "testusername",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "test1234",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "gukadavitadze203@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": "https://blog-platform-sr5n.onrender.com/api/user/new-user"
+					},
+					"response": []
+				},
+				{
+					"name": "get Token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "secretKey",
+								"value": "^-Rp}l,AR$CF&(Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "gukadavitadze20@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "guka1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": "https://blog-platform-sr5n.onrender.com/api/user/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Get user by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "secretKey",
+								"value": "^-Rp}l,AR$CF&(Q",
+								"type": "text"
+							}
+						],
+						"url": "https://blog-platform-sr5n.onrender.com/api/user/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "blogs",
+			"item": [
+				{
+					"name": "All Blogs",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "secretKey",
+								"value": "^-Rp}l,AR$CF&(Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "limit",
+									"value": "15",
+									"type": "text"
+								},
+								{
+									"key": "skip",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": "https://blog-platform-sr5n.onrender.com/api/blog/all"
+					},
+					"response": []
+				},
+				{
+					"name": "Get blog by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "secretKey",
+								"value": "^-Rp}l,AR$CF&(Q",
+								"type": "text"
+							}
+						],
+						"url": "https://blog-platform-sr5n.onrender.com/api/blog/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Create New Blog",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJndWthZGF2aXRhZHplMjBAZ21haWwuY29tIiwiaWF0IjoxNjk0MTAyNjcwfQ.QWAdiexsbuH65z-qsBDy75BshSN6yzVd4nTEsntZBEM"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "secretKey",
+								"value": "^-Rp}l,AR$CF&(Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "My new blog 1",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Here is my second blog",
+									"type": "text"
+								}
+							]
+						},
+						"url": "https://blog-platform-sr5n.onrender.com/api/blog/new"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Blog Using Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJndWthZGF2aXRhZHplMjBAZ21haWwuY29tIiwiaWF0IjoxNjk0MTAzNTcxfQ.2IhKI8lTFmZUW7iK6sD7dVOra7AgfdGm9mtoajJJmEE"
+							}
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "secretKey",
+								"value": "^-Rp}l,AR$CF&(Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "new titledxzc",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "here is my updated blog",
+									"type": "text"
+								}
+							]
+						},
+						"url": "https://blog-platform-sr5n.onrender.com/api/blog/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Blog",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJndWthZGF2aXRhZHplMjBAZ21haWwuY29tIiwiaWF0IjoxNjk0MTAzNTcxfQ.2IhKI8lTFmZUW7iK6sD7dVOra7AgfdGm9mtoajJJmEE"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "secretKey",
+								"value": "^-Rp}l,AR$CF&(Q",
+								"type": "text"
+							}
+						],
+						"url": "https://blog-platform-sr5n.onrender.com/api/blog/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Search Blogs",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "secretKey",
+								"value": "^-Rp}l,AR$CF&(Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "search",
+									"value": "my",
+									"type": "text"
+								},
+								{
+									"key": "skip",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "limit",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": "https://blog-platform-sr5n.onrender.com/api/blog/search"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
