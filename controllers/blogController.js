@@ -21,7 +21,7 @@ const blogController = {
     const blogsLimit = Number(limit) || 30;
     const blogsSkip = Number(skip) || 0;
     const query =
-      "SELECT title ,content FROM blog_details WHERE title LIKE ? OR content LIKE ? LIMIT ? OFFSET ?";
+      "SELECT id,title ,content FROM blog_details WHERE title LIKE ? OR content LIKE ? LIMIT ? OFFSET ?";
     connection.query(
       query,
       [`%${search}%`, `%${search}%`, blogsLimit, blogsSkip],
