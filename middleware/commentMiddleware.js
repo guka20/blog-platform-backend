@@ -107,6 +107,7 @@ const commentMiddleware = {
       if (err) {
         return res.status(401).json({ error: "Wrong token" });
       }
+      const { id } = decoded;
       try {
         const [userResult, ownerResult] = await Promise.all([
           connection.promise().query(checkingQuery, [id]),
@@ -124,6 +125,7 @@ const commentMiddleware = {
         }
         next();
       } catch (error) {
+        console.log(error);
         return res.status(500).json({ message: "Internal Server Error" });
       }
     });
