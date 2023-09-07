@@ -39,7 +39,6 @@ const blogController = {
   getBlogById: (req, res) => {
     const query = "SELECT * FROM blog_details WHERE id = ?";
     const { id } = req.params;
-    console.log(typeof id);
     connection.query(query, [id], (err, result) => {
       if (err) throw err;
       if (result.length === 0)

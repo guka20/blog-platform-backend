@@ -4,10 +4,12 @@ const dotenv = require("dotenv");
 const cors = require("cors");
 const userRouter = require("./routes/users");
 const blogsRouter = require("./routes/blogs");
+const requestMiddleware = require("./middleware/requestMiddleware");
 dotenv.config();
 
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
+app.use(requestMiddleware);
 app.use("/api/user", userRouter);
 app.use("/api/blog", blogsRouter);
 
